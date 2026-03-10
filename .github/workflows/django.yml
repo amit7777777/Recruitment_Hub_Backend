@@ -27,5 +27,5 @@ jobs:
 
       - name: Django System Check
         run: |
-          cd backend   # change this folder name to where manage.py exists
+          cd recruitmetsoft   # change this folder name to where manage.py exists
           python manage.py check
