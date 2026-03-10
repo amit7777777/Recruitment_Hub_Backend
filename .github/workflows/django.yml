@@ -2,7 +2,7 @@ name: Django Backend CI
 
 on:
   push:
-    branches: [ master, main ]
+    branches: [master, main]
 
 jobs:
   build:
@@ -23,9 +23,9 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install django
-          pip install -r requirements.txt || true
+          pip install django-cors-headers
 
-      - name: Django System Check
+      - name: Run Django Check
         run: |
-          cd recruitmetsoft   # change this folder name to where manage.py exists
+          cd recruitmetsoft
           python manage.py check
