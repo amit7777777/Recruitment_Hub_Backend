@@ -12,14 +12,16 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.CreateModel(
-            name='Candidate',
+            name='Institute',
             fields=[
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('name', models.CharField(max_length=100)),
-                ('contact', models.CharField(max_length=15)),
-                ('address', models.TextField()),
+                ('institute_name', models.CharField(max_length=150)),
+                ('contact_number', models.CharField(max_length=15)),
+                ('email', models.EmailField(max_length=254)),
+                ('course_offered', models.CharField(max_length=100)),
                 ('tech_stack', models.CharField(max_length=200)),
-                ('total_experience', models.DecimalField(decimal_places=1, max_digits=4)),
+                ('city', models.CharField(max_length=100)),
+                ('address', models.TextField()),
             ],
         ),
     ]
